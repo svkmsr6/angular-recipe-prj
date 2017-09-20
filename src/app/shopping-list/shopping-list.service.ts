@@ -23,4 +23,13 @@ export class ShoppingListService {
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
 
+  addIngredients(ingredients:Ingredient[]){
+    /* let self = this;
+    ingredients.forEach((ingredient)=>{
+      self.addIngredient(ingredient);
+    }); */
+    this.ingredients.push(...ingredients);
+    this.ingredientsChanged.emit(this.ingredients.slice());
+  }
+
 }
